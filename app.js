@@ -4,7 +4,13 @@ app.controller('homeController', home);
 
 home.$inject = []
 
-function home($timeout) {
+function home() {
   var vm = this;
-  vm.message = "Test message"
+  vm.todos = [
+    {name: "Shower"},
+    {name: "Eat"}
+  ]
+
+  vm.message = "To Do List:";
+
 }
