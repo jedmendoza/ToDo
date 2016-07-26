@@ -41,11 +41,11 @@ server.delete('/:id', function(req, res) {
     var list = db.collection('list');
     list.deleteOne({
       id: req.params.id
-    }), function(error, result) {
+    }, function(error, result) {
       console.log(result);
       res.send(result);
       db.close()
-    }
+    })
   })
 });
 

@@ -41,6 +41,55 @@ describe('Test the REST API', function() {
         assert.equal(response.statusCode, 200);
         done();
       })
+    });
+  });
+
+  describe('GET', function() {
+    it('expects to let you view', function(done) {
+      request({
+        url: 'http://localhost:8080/',
+        method: 'GET'
+      }, function(error, response) {
+        assert.equal(response.statusCode, 404);
+        done();
+      })
+    });
+  });
+
+  describe('GET', function() {
+    it('lets you view', function(done) {
+      request({
+        url: 'http://localhost:8080/12345',
+        method: 'GET'
+      }, function(error, response) {
+        assert.equal(response.statusCode, 200);
+        done();
+      })
+    });
+  });
+
+  describe('DELETE', function() {
+    it('expects you to be able to delete an item', function(done) {
+      request({
+        url: 'http://localhost:8080',
+        method: 'DELETE'
+      }, function(error, response) {
+        assert.equal(response.statusCode, 404);
+        done()
+      })
+    });
+  });
+
+  describe('DELETE', function() {
+    it('lets you delete', function(done) {
+      request({
+        url: 'http://localhost:8080/delete',
+        method: 'DELETE'
+      }, function(error, response) {
+        assert.equal(response.statusCode, 200);
+        done();
+      })
     })
-  })
+  });
+  
 });
