@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/jedmendoza/ToDo#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "angular": "^1.5.8",
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.4",
+    "request": "^2.74.0"
   },
   "devDependencies": {}
 }
